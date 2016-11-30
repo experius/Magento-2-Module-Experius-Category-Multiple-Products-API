@@ -1,6 +1,6 @@
 {
     "name": "experius/module-categorymultipleproductsapi",
-    "description": "Adds functionality to the API to add multiple products to a category via one call or replace all products inside category with new array",
+    "description": "Adds functionality to the Magento 2 API to add multiple products to a category via one call or replace all products inside category with new array",
     "authors": [
         {
             "name": "Experius",
