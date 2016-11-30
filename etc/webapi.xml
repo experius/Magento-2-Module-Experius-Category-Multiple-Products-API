@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+
+    <!-- Category multiple product link replace service -->
+    <route url="/V1/categories/:categoryId/multipleProductsReplace" method="POST">
+        <service class="Experius\CategoryMultipleProductsApi\Api\CategoryLinkRepositoryInterface" method="replace" />
+        <resources>
+            <resource ref="Magento_Catalog::categories" />
+        </resources>
+    </route>
+    <route url="/V1/categories/:categoryId/multipleProductsReplace" method="PUT">
+        <service class="Experius\CategoryMultipleProductsApi\Api\CategoryLinkRepositoryInterface" method="replace" />
+        <resources>
+            <resource ref="Magento_Catalog::categories" />
+        </resources>
+    </route>
+    
+    <!-- Category multiple product link save service -->
+    <route url="/V1/categories/:categoryId/multipleProductsSave" method="POST">
+        <service class="Experius\CategoryMultipleProductsApi\Api\CategoryLinkRepositoryInterface" method="save" />
+        <resources>
+            <resource ref="Magento_Catalog::categories" />
+        </resources>
+    </route>
+    <route url="/V1/categories/:categoryId/multipleProductsSave" method="PUT">
+        <service class="Experius\CategoryMultipleProductsApi\Api\CategoryLinkRepositoryInterface" method="save" />
+        <resources>
+            <resource ref="Magento_Catalog::categories" />
+        </resources>
+    </route>
+</routes>

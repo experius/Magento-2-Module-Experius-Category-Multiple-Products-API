@@ -1,0 +1,20 @@
+{
+    "name": "experius/module-categorymultipleproductsapi",
+    "description": "Adds functionality to the API to add multiple products to a category via one call or replace all products inside category with new array",
+    "authors": [
+        {
+            "name": "Experius",
+            "email": "info@experius.nl"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Experius\\CategoryMultipleProductsApi\\": ""
+        }
+    }
+}
