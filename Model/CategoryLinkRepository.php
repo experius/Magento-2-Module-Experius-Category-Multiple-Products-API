@@ -77,7 +77,7 @@ class CategoryLinkRepository extends \Magento\Catalog\Model\CategoryLinkReposito
      * @SuppressWarnings(PHPMD.CyclomaticComplexity)
      * @SuppressWarnings(PHPMD.NPathComplexity)
      */
-    public function save($categoryId, $productLinks)
+    public function saveMultiple($categoryId, $productLinks)
     {
         $messages = [];
         try {

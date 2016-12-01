@@ -29,5 +29,5 @@ interface CategoryLinkRepositoryInterface
      * @throws \Magento\Framework\Exception\NoSuchEntityException
      * @throws \Magento\Framework\Exception\StateException
      */
-    public function save($categoryId, $productLinks);
+    public function saveMultiple($categoryId, $productLinks);
 }
