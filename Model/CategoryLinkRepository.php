@@ -41,11 +41,16 @@ class CategoryLinkRepository extends \Magento\Catalog\Model\CategoryLinkReposito
         try {
             $category = $this->categoryRepository->get($categoryId);
             $productPositions = [];
+            $currentProductPositions = $category->getProductsPosition();
             foreach ($productLinks as $productLink){
                 try {
                     $productId = $this->productResourceModel->getIdBySku($productLink->getSku());
                     if ($productId){
-                        $productPositions[$productId] = $productLink->getPosition();
+                        $position = $productLink->getPosition();
+                        if (!$position && isset($currentProductPositions[$productId])) {
+                            $position = $currentProductPositions[$productId];
+                        }
+                        $productPositions[$productId] = $position;
                     }
                 } catch (NoSuchEntityException $e){
                     $messages[] = "Product with SKU: " . $productLink->getSku() . ", does not exist.";
